@@ -1,0 +1,48 @@
+*{box-sizing: border-box;}
+
+input{
+	width: 30%;
+	height: 50px; 
+	color: green; 
+	font-size: 20px; 
+	background-color: white; 
+}
+h2{
+	color: black;
+}
+button
+{
+width: 25%;
+height: 30px; 
+font-size: 24px; 
+background-color: lime; 
+color: black; 
+border-radius: 20%
+
+}	
+div
+{
+	width: 30%;
+	height: 200px; 
+	border: 1px dotted blue; 
+	background-color: #f1f1f1; 
+}
+
+p
+{
+color: blue; 
+font-size: 20px; 
+font-weight: bold; 
+}
+	
+demo.js: 
+-------
+function create()
+{
+content = document.getElementById("input_text").value; 
+element = document.createElement("p") //இங்கே <p></p> வந்திருக்கும்.  
+our_data = document.createTextNode(content); //இங்கே நம்முடைய text
+element.appendChild(our_data); 
+mydiv = document.getElementById("mydiv");
+mydiv.appendChild(element); 
+}

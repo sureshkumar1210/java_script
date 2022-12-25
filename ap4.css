@@ -1,0 +1,37 @@
+h2
+{
+	text-align: center; 
+	background-color: brown;
+	color: white;
+}
+input
+{
+	width: 25px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid brown; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	
+}
+#calc
+	{
+	width: 180px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid brown; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	}
+#clear
+	{
+	width: 180px; 
+	background-color: #f1f1f1;
+	color: black; 
+	border: 1px solid brown; 
+	border-radius: 8px; 
+	padding: 20px; 
+	margin: 5px; 
+	}

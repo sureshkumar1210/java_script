@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #table_style {
+            border:2px solid #CCC;
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table Border Colorஐ ஜாவாஸ்கிரிப்ட் மூலம் மாற்றுவோம்</h2>
+    <div id="table_style">வணக்கம்</div>
+    <br>
+    <button type="button" onclick="changeStyle()">Click Here</button>
+    <script>
+    function changeStyle(){
+        var element = document.getElementById("table_style");
+        element.style.borderColor = "red";
+        element.style.borderStyle = "dotted";
+        element.style.width="200px"
+        element.style.text-align="right";
+        element.style.color = "#FF0000";
+
+    }
+    </script>
+</body>
