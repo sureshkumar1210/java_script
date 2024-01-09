@@ -1,0 +1,13 @@
+.loader{
+	position : relative;
+	margin   : auto;
+	width    : 350px;
+	height   : 350px;
+}
+.loader div{
+	background-color :red;
+	position         : absolute;
+	margin			 : auto;
+	width			 : 125px;
+	height			 :200px;
+}
