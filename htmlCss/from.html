@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+    <title>SK_FORM</title>
+		<style>
+            div {
+                color: blue;
+				border-style: solid;
+				border-color: gray;
+            }
+        </style>
+</head>
+<h1 style="text-align:center;"><u>FORM</u></h1>
+
+<div id="Container">
+<body style = "background-color:lightblue">
+<div class="sk">
+<form style="text-align:center;">
+	<br></br>
+	<label class="labels">Name</label>
+	<input type="text" minlength="4" maxlength = "20" placeholder = "sk">
+	<br></br>
+	
+	<label class="labels">Age</label>
+	<input type = "text" minlength = "4" maxlength = "20">
+	<br></br>
+	
+    <label class="labels"for="date">Date of Birth</label>
+    <input type="datetime-local" id="date">
+     <br></br>
+	 
+    <label class="labels">address</label>
+    <input type="text" minlength="4" maxlength="20">
+	<br></br>
+	
+	<label class="labels"for="Message">Message</label>
+   <textarea id="Message" name="freeform" rows="1" cols="30" placeholder = "Enter text here..."></textarea>
+	<br></br>
+</form>
+</div>
+</div>
+</body>
+   <style>
+   #Container{
+   border:1px solid;
+   height:300px;
+   width:500px;
+   text-align:center;
+   }
+   .labels{
+   color:yellow;
+   left:10px;
+   }
+   </style>
+</html>

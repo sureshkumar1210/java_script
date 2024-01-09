@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+	
+    <script>
+	
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+
+            if (username) {
+                //alert('Welcome, ' + username + '!');
+                document.write("<h1 style='color:#191970'><b> WELCOME USER : </b>" + username + "</h1>");
+				document.write("<div style = 'background-color:gray'><h2 style = 'text-align:center'><b>Avilable Books</b></h2></div><br>");
+				document.write("<div style='text-align:center;'><a href='https://www.w3schools.com/html'><button>HTML</button></a></div><br>");
+				document.write("<div style='text-align:center;'><a href='https://www.w3schools.com/css'><button>CSS</button></a></div><br>");
+				document.write("<div style='text-align:center;'><a href='https://www.w3schools.com/js'><button>JS</button></a></div>");
+            }
+			
+        });
+    </script>
+	<p id = "demo"><p>
+</body>
+</html>

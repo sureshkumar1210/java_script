@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>JS API</title>
+</head>
+<body>
+	<h3 style="text-align:center;">show position</h3><hr>
+	<p>the Geolocation API can return the coordinates of where the browser is located</p>
+	<button onclick="getLocation()">Try It</button>
+	<p id="map"></p>
+	<p id="store"></p>
+
+<script>
+	const x = document.getElementById("map");
+
+	function getLocation() {
+	try {
+		navigator.geolocation.getCurrentPosition(showPosition);
+	} catch {
+		x.innerHTML = err;
+		}
+	}
+
+	function showPosition(position) {
+	x.innerHTML = "Latitude: " + position.coords.latitude + 
+	"<br>Longitude: " + position.coords.longitude;
+	}
+	
+	localStorage.setItem("name","suresh");
+	document.getElementById("store").innerHTML=localStorage.getItem("name");
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title> DOM</title>
+</head>
+<body>
+
+	
+	<h1 style= "text-align:center" class="ts"></h1>
+	<h2 class = "class">tamil</h2>
+	<p id = "sk"></p>
+	
+	<form id="form" action="./dom2.html">
+		First Name:<input type = "text" name = "fname"  value= "suresh" ><br>
+		Last Name:<input type = "text" name = "lname" value = "kumar"><br>
+		<input type = "submit" value = "submit">
+	</form>
+	<p id = "loop">haii</p>
+	<p id = "changeContent">learn java<p>
+	<img id = "changeImg" src = "animal.jpg">
+	<p id = "addCss">Dolfin</p>
+	<button type="button" onclick='document.getElementById("addCss").style.color= "red"'>click</button>
+	<h2 onclick="this.innerHTML='Ooops!';">click me</h2>
+	<button type="button" onclick = "date()">displayDate</button>
+	<p id = "demo"></p>
+	
+	<div onmouseover = "mOver(this)" onmouseout="mOut(this)" style="background-color:white;width:90px;height:20px;padding:40px;">Mouse Over Me </div>
+	
+	<button id="addEvenLis"> addEventListener </button><br>
+	<p id ="remove">this is remove para</p><br>
+	<button onclick="remove()"> remove this para</button>
+	<div id ="navigation">
+		<p>use js navigation</p>
+	</div>  
+	<p> if you want to go next page click blow</p>
+	<input type = "button" value = "forward"  onclick = "forward()">
+<script>
+	
+	document.getElementById("sk").innerHTML="welcome";
+	
+	const x = document.forms["form"];
+	let text = "";
+	for(let i=0;i < x.length;i++){
+		text+=x.elements[i].value+ "<br>";
+	}
+	document.getElementById("loop").innerHTML= text;
+	
+	document.getElementById("changeContent").innerHTML= "learn html,css&js";
+	
+	document.getElementById("changeImg").src="animal2.jpg";
+	
+	//document.write(Date());
+	function date(){
+	document.getElementById("demo").innerHTML=Date();
+	}
+	function mOver(obj){
+		obj.style.backgroundColor = "#1ec5e5";
+		obj.innerHTML="Thank you";
+	}
+	function mOut(obj){
+	obj.style.backgroundColor="#D94A38";
+	obj.innerHTML = "Mouse Over Me";
+	}
+	
+	document.getElementById("addEvenLis").addEventListener("click",function(){
+	alert("this is addEvenentListener");
+	});
+	function remove(){
+	document.getElementById("remove").remove();
+	}
+	
+	function forward(){
+		window.history.forward()
+	}
+	
+</script>
+</body>
+</html>

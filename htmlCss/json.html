@@ -1,0 +1,42 @@
+<!doctype html >
+<html>
+<head>
+	<title> JSON</title>
+</head>
+<body>
+		<h1 style="text-align:center;">JSON</h1>
+</body>
+		<p id = "ref"></p>
+		<p id = "ref1"></p>
+		<p id = "parse"></p>
+		<p id = "objToJSon"></p>
+<script>
+		const x = {name:"suresh",age:20};
+		
+		document.getElementById("ref").innerHTML=x["name"]; //or x.name;
+		
+		const z = '{"name":"John", "age":30, "city":"New York"}'
+		const y = JSON.parse(z);
+		document.getElementById("ref1").innerHTML="name:"+y.name+"  age:"+y.age;
+		
+		const text = '{"name":"suresh", "birth":"1999-07-09", "city":"chinnasalm"}';
+		const obj = JSON.parse(text, function (key, value) {
+			if (key == "birth") {
+			return new Date(value);
+			} else {
+					return value;
+						}
+			});
+		document.getElementById("parse").innerHTML = obj.name + ", " + obj.birth; 
+		
+		const myJSON = JSON.stringify(x);
+		document.getElementById("objToJSon").innerHTML = myJSON;
+		
+		//If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server
+		//const myObj = { name: "John", age: 31, city: "New York" };
+		//const myJSON1 = JSON.stringify(myObj);
+		//window.location = "ajax.txt?x=" + myJSON1;
+		
+		
+</script>
+</html>

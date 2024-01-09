@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>welcome</title>
+<body>
+</body>
+<p id = "loop"></p>
+<input type = "button" value = "previous page" onclick = "back()">
+
+
+<script>
+	
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const firstname = urlParams.get('fname');
+			const lastname	= urlParams.get('lname');
+
+            if (firstname) {
+                alert('Welcome, ' + firstname + '!');
+				document.getElementById("loop").innerHTML="welcome mr."+firstname+lastname;
+			}
+        });
+		function back(){
+			window.history.back()
+		}
+</script>
+</head>
+</html>

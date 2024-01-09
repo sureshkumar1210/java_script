@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title> BOM</title>
+</head>
+<body>
+	<h1 style= "text-align:center">BROWSER OBJECT MODEL</h1>
+	<p> window screen</p>
+	<hr>
+	<p id = "win"></p>
+	<p> window location</p>
+	<hr>
+	<p id = "win1"></p>
+	<p> js history</p>
+	<hr>
+	<input type = "button" value = "back" onclick = "back()">
+	<input type = "button" value = "forward" onclick = "forward()"><br>
+	<p> window navigator</p>
+	<hr>
+	<p>pop up </p>
+	<p id = "navi"></p>
+	<button onclick="myFunction()">Try it</button>
+	<p id="demo"></p>
+	<p>set time </p>
+	<hr>
+	</br>
+	<p id = "timee"><p<>
+	
+	
+	
+	<script>
+		document.getElementById("win").innerHTML="let see window height:"+window.innerHeight+"px</br>"+
+												 "let see window width :"+window.innerWidth +"px</br>"+
+												 "let see screen width :"+screen.width+"</br>"+
+												 "let see screen height:"+screen.height+"</br>"+
+												 "let see screen avilableWidth:"+screen.availWidth+"</br>"+
+												 "let see screen availableHeight:"+screen.availHeight+"</br>"+
+												 "let see screen colorDepth:"+screen.colorDepth+"</br>"+
+												 "let see screen pixelDepth:"+screen.pixelDepth;
+		
+		document.getElementById("win1").innerHTML="let see url this   page:"+window.location.href+"<br>"+
+												  "let see page host name :"+window.location.hostname+"<br>"+
+												  "let see page path name :"+window.location.pathname+"<br>"+
+												  "let see page protocal  :"+window.location.protocol+"<br>"+
+												  "let see page port number:"+window.location.port;
+												  
+		function back(){
+			window.history.back()
+		}
+		function forward(){
+			window.history.forward()
+		}
+		
+		document.getElementById("navi").innerHTML="navigator.cookieEnabled:"+navigator.cookieEnabled+"<br>"+
+												  "navigator.appName is   :"+navigator.appName+"<br>"+
+												  "navigator . appCodeName :"+navigator.appCodeName+"<br>"+
+												  "navigator . product    :"+navigator.product+"<br>"+
+												  "navigator . appVersion :"+navigator.appVersion+"<br>"+
+												  "navigator . platform   :"+navigator.platform+"<br>"+
+												  "navigator . userAgent  :"+navigator.userAgent+"<br>"+
+												  "navigator . language   :"+navigator.language+"<br>"+
+												  "navigator . online     :"+navigator.onLine+"<br>"+
+												  "navigator . javaEnabled:"+navigator.javaEnabled;
+												  
+		function alert(){
+			var txt;
+			if(conform("press button")){
+				txt = "pressed ok";
+			}
+			else{
+				txt = "you pressed cancel";
+				}
+			document.getElementById("al").innerHTML = txt;
+		}
+		
+function myFunction() {
+			var txt;
+		if (confirm("Press a button!")) {
+				txt = "You pressed OK!";
+			} else {
+				txt = "You pressed Cancel!";
+			}
+		document.getElementById("demo").innerHTML = txt;
+}
+setInterval(myTimer, 2000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+	</script>
+</body>
+</html>

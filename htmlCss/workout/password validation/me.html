@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Login_Form</title>
+	<link rel= "stylesheet" href = "./me.css">
+
+</head>
+
+
+<body >
+
+<main class="container">
+  <p>Learn new skills 👋</p>
+  <section class="animation">
+    <div class="first"><div>HTML</div></div>
+    <div class="second"><div>CSS</div></div>
+    <div class="third"><div>JAVA SCRIPT</div></div>
+  </section>
+</main>
+
+	<div id="form-item">
+		<form  id="myForm"  method = "get" ">
+			<br>
+			<label class = "label" >User Name</label>
+			<input type = "text" class = "box" id="username" name = "username" required>
+			<span class="error-message" id="usernameError"></span>
+			<br>
+			<div class="password-container">
+			<label class ="label" >password</label>
+			<input type = "password" id = "password" placeholder = "Enter password" class = "box"  required>
+			<span class="eye-icon" onclick="togglePassword()">👁️</span>
+			<span class="error-message" id="passwordError"></span>
+			<br></br>
+			</div>
+			<input type = "submit" value ="sign_in" onclick="return validatePassword()"> 
+			<br></br>
+		</form>
+		<p id="message" class="message"></p>
+	</div>
+	
+	<script src="./me.js"></script>
+
+</body>
+
+
+
+</html>
